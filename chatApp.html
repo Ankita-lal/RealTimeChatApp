@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffc8dd;
+    }
+
+    .page-container {
+      width: 70%;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: white;
+      position: relative;
+    }
+
+    .chat-container {
+      background-color: #bde0fe;
+    }
+
+    .page-container::before,
+    .page-container::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      bottom: -5px;
+      width: 10px;
+      background: linear-gradient(to bottom, lightblue, lightblue) no-repeat;
+    }
+
+    .page-container::before {
+      left: -5px;
+      right: -5px;
+      background: linear-gradient(to right, pink, pink) no-repeat;
+    }
+
+    .message-form__button {
+      border: none;
+      background-color: #cdb4db;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="chat-container">
+      <div class="members-count">-</div>
+      <div class="members-list">-</div>
+      <div class="messages"></div>
+      <form class="message-form" onsubmit="return false;">
+        <input class="message-form__input" placeholder="Type a message.." type="text" />
+        <input class="message-form__button" value="Send" type="submit" />
+      </form>
+    </div>
+  </div>
+</body>
+</html>
